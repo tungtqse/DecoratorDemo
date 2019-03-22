@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DecoratorDemo.StarBuckDemo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace DecoratorDemo
     {
         static void Main(string[] args)
         {
-            Run();
+            RunStarBuck();
         }
 
         public static void Run()
@@ -38,6 +39,22 @@ namespace DecoratorDemo
             // Wait for user
 
             Console.ReadKey();
+        }
+
+        public static void RunStarBuck()
+        {
+            Console.WriteLine("StarBuck Coffe Order: ");
+
+            Beverage beverage = new Espresso();
+
+            Console.WriteLine(string.Format("{0} : ${1}", beverage.GetDescription(), beverage.GetCost()));
+
+            Beverage beverage2 = new DarkRoast();
+            beverage2 = new Mocha(beverage2);
+            beverage2 = new SteamMilk(beverage2);
+            beverage2 = new Whip(beverage2);
+
+            Console.WriteLine(string.Format("{0} : ${1}", beverage2.GetDescription(), beverage2.GetCost()));
         }
     }
 }

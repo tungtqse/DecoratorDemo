@@ -50,6 +50,16 @@
     <Compile Include="ConcreteDecorator\Decorator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StarBuckDemo\Component\Beverage.cs" />
+    <Compile Include="StarBuckDemo\ConcreteComponent\DarkRoast.cs" />
+    <Compile Include="StarBuckDemo\ConcreteComponent\Decaf.cs" />
+    <Compile Include="StarBuckDemo\ConcreteComponent\Espresso.cs" />
+    <Compile Include="StarBuckDemo\ConcreteComponent\HouseBlend.cs" />
+    <Compile Include="StarBuckDemo\ConcreteDecorator\Mocha.cs" />
+    <Compile Include="StarBuckDemo\ConcreteDecorator\Soya.cs" />
+    <Compile Include="StarBuckDemo\ConcreteDecorator\SteamMilk.cs" />
+    <Compile Include="StarBuckDemo\ConcreteDecorator\Whip.cs" />
+    <Compile Include="StarBuckDemo\Decorator\CondimentDecorator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
